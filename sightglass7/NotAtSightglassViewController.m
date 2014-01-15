@@ -35,4 +35,8 @@
                    launchOptions:launchOptions];
 }
 
+-(IBAction)playAnyway:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

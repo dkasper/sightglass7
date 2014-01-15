@@ -15,6 +15,7 @@
 @interface BoardViewController () {
     BOOL facebookShare, twitterShare;
     double backoff;
+    NSURLSession *session;
 }
 
 @property (nonatomic, copy) NSString *winShareText;
@@ -28,6 +29,7 @@
         backoff = 1.0;
         self.squares = [[NSMutableArray alloc] initWithCapacity:GRID_SIZE * GRID_SIZE];
         self.title = @"Sightglass Bingo";
+        session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
     }
     return self;
 }
@@ -61,8 +63,9 @@
 
 -(void)loadData {
     NSURL *phrasesUrl = [NSURL URLWithString:@"http://davidkasper.net/words.txt"];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration ephemeralSessionConfiguration]];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSURLSessionDataTask *task = [session dataTaskWithURL:phrasesUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         if(!error) {
             NSString *phraseString = [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             self.phrases = [phraseString componentsSeparatedByString:@","];
@@ -71,8 +74,10 @@
                 [self newGame:nil];
             });
         } else {
-            [self performSelector:@selector(loadData) withObject:nil afterDelay:backoff];
-            backoff = MIN(backoff * 2, 16.0);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSelector:@selector(loadData) withObject:nil afterDelay:backoff];
+            });
+            backoff = MIN(backoff * 2, 4.0);
         }
     }];
     
@@ -102,9 +107,12 @@
 }
 
 -(void)squareTapped:(Square *)sender {
+    if (!sender.phrase) {
+        return;
+    }
     NSInteger row = sender.index / GRID_SIZE;
     NSInteger col = sender.index % GRID_SIZE;
-    sender.selected = !sender.selected;
+    sender.selected = !sender.isSelected;
     [self checkForWinAtIndex:[NSIndexPath indexPathForRow:row inSection:col]];
 }
 
