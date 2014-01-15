@@ -7,16 +7,47 @@
 //
 
 #import "AppDelegate.h"
+@import CoreLocation;
+
+@interface AppDelegate ()<CLLocationManagerDelegate>
+
+@property (nonatomic) CLLocationManager *manager;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    self.manager = [[CLLocationManager alloc] init];
+    self.manager.delegate = self;
+    CLLocationCoordinate2D sightglassCoordinate = CLLocationCoordinate2DMake(37.777143, -122.408427);
+    
+    if([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:sightglassCoordinate radius:50.0 identifier:@"SightglassRegion"];
+        [self.manager startMonitoringForRegion:region];
+        [self.manager requestStateForRegion:region];
+    }
+
     return YES;
+}
+
+-(void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region {
+    NSLog(@"determined state");
+    if(state == CLRegionStateOutside) {
+        [self.window.rootViewController performSegueWithIdentifier:@"NotAtSightglassSegue" sender:nil];
+    } else {
+        if(self.window.rootViewController.presentedViewController) {
+            [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+        }
+        
+        if([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground) {
+            UILocalNotification *notification = [[UILocalNotification alloc] init];
+            notification.alertBody = @"Play a game of Sightglass Bingo?";
+            notification.alertAction = @"Play";
+            [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        }
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

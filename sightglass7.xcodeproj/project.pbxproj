@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F9F642598CE4212ABB88421 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D25C104856084D90B864DE96 /* libPods.a */; };
+		F708C453183BF62400C097A7 /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F708C452183BF62400C097A7 /* BoardViewController.m */; };
+		F721EAF3183A902200F05041 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F721EAF2183A902200F05041 /* Social.framework */; };
 		F7ABB21C183495ED009D1C65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ABB21B183495ED009D1C65 /* Foundation.framework */; };
 		F7ABB21E183495ED009D1C65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ABB21D183495ED009D1C65 /* CoreGraphics.framework */; };
 		F7ABB220183495ED009D1C65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ABB21F183495ED009D1C65 /* UIKit.framework */; };
@@ -19,6 +22,9 @@
 		F7ABB237183495ED009D1C65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7ABB21F183495ED009D1C65 /* UIKit.framework */; };
 		F7ABB23F183495ED009D1C65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7ABB23D183495ED009D1C65 /* InfoPlist.strings */; };
 		F7ABB241183495ED009D1C65 /* sightglass7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7ABB240183495ED009D1C65 /* sightglass7Tests.m */; };
+		F7ABB24E18349608009D1C65 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7ABB24D18349608009D1C65 /* Storyboard.storyboard */; };
+		F7DE23531859932400375538 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DE23521859932400375538 /* Square.m */; };
+		F7F39F8F188646B200D0FCB1 /* NotAtSightglassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F39F8E188646B200D0FCB1 /* NotAtSightglassViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D25C104856084D90B864DE96 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CD2771469C4B0F98913C66 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F708C451183BF62400C097A7 /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		F708C452183BF62400C097A7 /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		F721EAF2183A902200F05041 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F7ABB218183495ED009D1C65 /* sightglass7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sightglass7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7ABB21B183495ED009D1C65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7ABB21D183495ED009D1C65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +59,11 @@
 		F7ABB23C183495ED009D1C65 /* sightglass7Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sightglass7Tests-Info.plist"; sourceTree = "<group>"; };
 		F7ABB23E183495ED009D1C65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7ABB240183495ED009D1C65 /* sightglass7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sightglass7Tests.m; sourceTree = "<group>"; };
+		F7ABB24D18349608009D1C65 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F7DE23511859932400375538 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		F7DE23521859932400375538 /* Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
+		F7F39F8D188646B200D0FCB1 /* NotAtSightglassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotAtSightglassViewController.h; sourceTree = "<group>"; };
+		F7F39F8E188646B200D0FCB1 /* NotAtSightglassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotAtSightglassViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F721EAF3183A902200F05041 /* Social.framework in Frameworks */,
 				F7ABB21E183495ED009D1C65 /* CoreGraphics.framework in Frameworks */,
 				F7ABB220183495ED009D1C65 /* UIKit.framework in Frameworks */,
 				F7ABB21C183495ED009D1C65 /* Foundation.framework in Frameworks */,
+				7F9F642598CE4212ABB88421 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,7 @@
 				F7ABB23A183495ED009D1C65 /* sightglass7Tests */,
 				F7ABB21A183495ED009D1C65 /* Frameworks */,
 				F7ABB219183495ED009D1C65 /* Products */,
+				F1CD2771469C4B0F98913C66 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +115,12 @@
 		F7ABB21A183495ED009D1C65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F721EAF2183A902200F05041 /* Social.framework */,
 				F7ABB21B183495ED009D1C65 /* Foundation.framework */,
 				F7ABB21D183495ED009D1C65 /* CoreGraphics.framework */,
 				F7ABB21F183495ED009D1C65 /* UIKit.framework */,
 				F7ABB234183495ED009D1C65 /* XCTest.framework */,
+				D25C104856084D90B864DE96 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +130,13 @@
 			children = (
 				F7ABB22A183495ED009D1C65 /* AppDelegate.h */,
 				F7ABB22B183495ED009D1C65 /* AppDelegate.m */,
+				F7ABB24D18349608009D1C65 /* Storyboard.storyboard */,
+				F708C451183BF62400C097A7 /* BoardViewController.h */,
+				F708C452183BF62400C097A7 /* BoardViewController.m */,
+				F7F39F8D188646B200D0FCB1 /* NotAtSightglassViewController.h */,
+				F7F39F8E188646B200D0FCB1 /* NotAtSightglassViewController.m */,
+				F7DE23511859932400375538 /* Square.h */,
+				F7DE23521859932400375538 /* Square.m */,
 				F7ABB22D183495ED009D1C65 /* Images.xcassets */,
 				F7ABB222183495ED009D1C65 /* Supporting Files */,
 			);
@@ -151,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7ABB244183495ED009D1C65 /* Build configuration list for PBXNativeTarget "sightglass7" */;
 			buildPhases = (
+				BB5F8C6881684EB2BBC29AD5 /* Check Pods Manifest.lock */,
 				F7ABB214183495ED009D1C65 /* Sources */,
 				F7ABB215183495ED009D1C65 /* Frameworks */,
 				F7ABB216183495ED009D1C65 /* Resources */,
+				A3666951EF754FBBBDAF9AED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +251,7 @@
 			files = (
 				F7ABB226183495ED009D1C65 /* InfoPlist.strings in Resources */,
 				F7ABB22E183495ED009D1C65 /* Images.xcassets in Resources */,
+				F7ABB24E18349608009D1C65 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,12 +265,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3666951EF754FBBBDAF9AED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5F8C6881684EB2BBC29AD5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F7ABB214183495ED009D1C65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F39F8F188646B200D0FCB1 /* NotAtSightglassViewController.m in Sources */,
+				F7DE23531859932400375538 /* Square.m in Sources */,
 				F7ABB22C183495ED009D1C65 /* AppDelegate.m in Sources */,
+				F708C453183BF62400C097A7 /* BoardViewController.m in Sources */,
 				F7ABB228183495ED009D1C65 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +423,7 @@
 		};
 		F7ABB245183495ED009D1C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1CD2771469C4B0F98913C66 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -369,6 +437,7 @@
 		};
 		F7ABB246183495ED009D1C65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1CD2771469C4B0F98913C66 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -441,6 +510,7 @@
 				F7ABB246183495ED009D1C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7ABB247183495ED009D1C65 /* Build configuration list for PBXNativeTarget "sightglass7Tests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +519,7 @@
 				F7ABB249183495ED009D1C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
