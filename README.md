@@ -5,7 +5,7 @@ This is Sightglass Bingo revamped for iOS 7. The layout is now done completely w
 
 Screenshot
 ----------
-![ScreenShot](/ScreenShot.png "Screenshot")
+![Screenshot](/Screenshot.png "Screenshot")
 
 Original Version
 ----------------
