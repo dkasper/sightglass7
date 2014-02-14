@@ -16,6 +16,12 @@
 
 @implementation NotAtSightglassViewController
 
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    self.playAnywayButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.howToGetThereButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+}
+
 -(IBAction)findSightglass:(id)sender {
     CLLocationCoordinate2D sightglassCoordinate = CLLocationCoordinate2DMake(37.777143, -122.408427);
     

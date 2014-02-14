@@ -10,4 +10,6 @@
 
 @interface NotAtSightglassViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIButton *howToGetThereButton, *playAnywayButton;
+
 @end
